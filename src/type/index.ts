@@ -13,10 +13,14 @@ export type Method =
   | 'OPTIONS'
   | 'patch'
   | 'PATCH'
+export interface HeadersInterface {
+  [propName: string]: string
+}
 
 export interface AxiosRequestConfig {
   method: Method
   url: string
   data?: any
   params?: any
+  headers?: any
 }
