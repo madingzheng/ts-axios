@@ -1,4 +1,3 @@
 import axios from './axios'
-
-export * from './type/index'
+export * from './types/index'
 export default axios

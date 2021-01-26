@@ -1,4 +1,4 @@
-import { HeadersInterface } from '../type'
+import { HeadersInterface } from '../types'
 import { isPlainObject } from './util'
 
 function normalizeHeaderName(headers: any, normalizedName: string): void {

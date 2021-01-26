@@ -1,4 +1,4 @@
-import { AxiosRequestConfig, AxiosResponse } from '../type'
+import { AxiosRequestConfig, AxiosResponse } from '../types'
 
 class AxiosError extends Error {
   config: AxiosRequestConfig
