@@ -7,7 +7,6 @@ function createInstance(): AxiosInstance {
   // 创建axios实例，request方法下面
   const instance = Axios.prototype.request.bind(context)
   extend(instance, context)
-  debugger
   return instance as AxiosInstance
 }
 
