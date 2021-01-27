@@ -18,13 +18,14 @@ export interface HeadersInterface {
 }
 
 export interface AxiosRequestConfig {
-  method: Method
+  method?: Method
   url?: string
   data?: any
   params?: any
   headers?: any
   responseType?: XMLHttpRequestResponseType
   timeout?: number
+  [propName: string]: any
 }
 
 export interface AxiosResponse<T = any> {
@@ -45,7 +46,9 @@ export interface AxiosError<T> extends Error {
   isAxiosError: boolean
 }
 
-export interface Axios {
+export interface AxiosInterface {
+  defaults: AxiosRequestConfig
+
   interceptors: {
     request: AxiosInterceptorManager<AxiosRequestConfig>
     response: AxiosInterceptorManager<AxiosResponse>
@@ -68,7 +71,7 @@ export interface Axios {
   patch<T = any>(url: string, data?: any, config?: AxiosRequestConfig): AxiosPromise<T>
 }
 
-export interface AxiosInstance extends Axios {
+export interface AxiosInstance extends AxiosInterface {
   <T = any>(config: AxiosRequestConfig): AxiosPromise<T>
 
   <T = any>(url: string, config?: AxiosRequestConfig): AxiosPromise<T>
