@@ -15,7 +15,7 @@
 # 启动项目
 
 获得项目
-> git clone https://github.com/YanXinChen1990/imooc-ts-axios
+> git clone git@github.com:madingzheng/ts-axios.git
 
 安装依赖
 > yarn
