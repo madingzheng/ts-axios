@@ -14,8 +14,6 @@
 
 # 启动项目
 
-获得项目
-> git clone git@github.com:madingzheng/ts-axios.git
 
 安装依赖
 > yarn
